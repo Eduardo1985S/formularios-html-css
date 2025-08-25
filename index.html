@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula: Formulários HTML e CSS</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>📝 Formulários HTML e CSS</h1>
+      <p>
+        Aprenda tudo sobre formulários: teoria, tipos de campos e exemplos
+        práticos
+      </p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#teoria">Teoria</a></li>
+        <li><a href="#tipos-input">Tipos de Input</a></li>
+        <li><a href="#atributos">Atributos</a></li>
+        <li><a href="#exemplo-completo">Exemplo Completo</a></li>
+        <li><a href="#validacao">Validação</a></li>
+        <li><a href="#estilizacao">Estilização</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- TEORIA -->
+      <section id="teoria" class="content-section">
+        <h2>📚 Teoria sobre Formulários HTML</h2>
+
+        <div class="theory-box">
+          <h3>O que são Formulários?</h3>
+          <p>
+            Formulários HTML são elementos que permitem aos usuários inserir e
+            enviar dados para um servidor. São fundamentais para interação do
+            usuário com páginas web.
+          </p>
+
+          <h4>Elementos principais:</h4>
+          <ul>
+            <li>
+              <strong>&lt;form&gt;</strong> - Container principal do formulário
+            </li>
+            <li><strong>&lt;input&gt;</strong> - Campos de entrada de dados</li>
+            <li>
+              <strong>&lt;textarea&gt;</strong> - Área de texto multilinhas
+            </li>
+            <li>
+              <strong>&lt;select&gt;</strong> - Lista de seleção (dropdown)
+            </li>
+            <li><strong>&lt;button&gt;</strong> - Botões de ação</li>
+            <li>
+              <strong>&lt;label&gt;</strong> - Rótulos para acessibilidade
+            </li>
+          </ul>
+        </div>
+
+        <div class="code-example">
+          <h4>Estrutura básica:</h4>
+          <pre><code>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome"&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- TIPOS DE INPUT -->
+      <section id="tipos-input" class="content-section">
+        <h2>🎯 Tipos de Input</h2>
+
+        <div class="input-grid">
+          <div class="input-example">
+            <h4>text - Texto simples</h4>
+            <input type="text" placeholder="Digite seu nome" />
+            <code>&lt;input type="text"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>email - Email</h4>
+            <input type="email" placeholder="seu@email.com" />
+            <code>&lt;input type="email"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>password - Senha</h4>
+            <input type="password" placeholder="Sua senha" />
+            <code>&lt;input type="password"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>number - Número</h4>
+            <input type="number" placeholder="123" min="1" max="100" />
+            <code>&lt;input type="number"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>tel - Telefone</h4>
+            <input type="tel" placeholder="(11) 99999-9999" />
+            <code>&lt;input type="tel"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>url - URL</h4>
+            <input type="url" placeholder="https://exemplo.com" />
+            <code>&lt;input type="url"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>date - Data</h4>
+            <input type="date" />
+            <code>&lt;input type="date"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>time - Hora</h4>
+            <input type="time" />
+            <code>&lt;input type="time"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>file - Arquivo</h4>
+            <input type="file" />
+            <code>&lt;input type="file"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>color - Cor</h4>
+            <input type="color" value="#ff0000" />
+            <code>&lt;input type="color"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>range - Slider</h4>
+            <input type="range" min="0" max="100" value="50" />
+            <code>&lt;input type="range"&gt;</code>
+          </div>
+
+          <div class="input-example">
+            <h4>search - Busca</h4>
+            <input type="search" placeholder="Pesquisar..." />
+            <code>&lt;input type="search"&gt;</code>
+          </div>
+        </div>
+
+        <div class="checkbox-radio-section">
+          <h3>Checkboxes e Radio Buttons</h3>
+          <div class="checkbox-radio-grid">
+            <div class="input-example">
+              <h4>checkbox - Múltipla escolha</h4>
+              <label><input type="checkbox" value="html" /> HTML</label>
+              <label><input type="checkbox" value="css" /> CSS</label>
+              <label><input type="checkbox" value="js" /> JavaScript</label>
+            </div>
+
+            <div class="input-example">
+              <h4>radio - Escolha única</h4>
+              <label
+                ><input type="radio" name="nivel" value="iniciante" />
+                Iniciante</label
+              >
+              <label
+                ><input type="radio" name="nivel" value="intermediario" />
+                Intermediário</label
+              >
+              <label
+                ><input type="radio" name="nivel" value="avancado" />
+                Avançado</label
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ATRIBUTOS -->
+      <section id="atributos" class="content-section">
+        <h2>⚙️ Principais Atributos</h2>
+
+        <div class="attributes-grid">
+          <div class="attribute-card">
+            <h4>required</h4>
+            <p>Campo obrigatório</p>
+            <input type="text" required placeholder="Campo obrigatório" />
+            <code>required</code>
+          </div>
+
+          <div class="attribute-card">
+            <h4>placeholder</h4>
+            <p>Texto de exemplo</p>
+            <input type="text" placeholder="Digite aqui..." />
+            <code>placeholder="texto"</code>
+          </div>
+
+          <div class="attribute-card">
+            <h4>maxlength</h4>
+            <p>Limite de caracteres</p>
+            <input type="text" maxlength="10" placeholder="Máx 10 chars" />
+            <code>maxlength="10"</code>
+          </div>
+
+          <div class="attribute-card">
+            <h4>readonly</h4>
+            <p>Somente leitura</p>
+            <input type="text" readonly value="Não editável" />
+            <code>readonly</code>
+          </div>
+
+          <div class="attribute-card">
+            <h4>disabled</h4>
+            <p>Campo desabilitado</p>
+            <input type="text" disabled value="Desabilitado" />
+            <code>disabled</code>
+          </div>
+
+          <div class="attribute-card">
+            <h4>pattern</h4>
+            <p>Expressão regular</p>
+            <input type="text" pattern="[0-9]{3}" placeholder="3 dígitos" />
+            <code>pattern="[0-9]{3}"</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXEMPLO COMPLETO -->
+      <section id="exemplo-completo" class="content-section">
+        <h2>🚀 Exemplo Completo - Formulário de Cadastro</h2>
+
+        <form class="complete-form" action="#" method="POST">
+          <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div class="form-group">
+              <label for="nome-completo">Nome Completo *</label>
+              <input type="text" id="nome-completo" name="nome" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" />
+              </div>
+
+              <div class="form-group">
+                <label for="genero">Gênero</label>
+                <select id="genero" name="genero">
+                  <option value="">Selecione...</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro">Outro</option>
+                  <option value="nao-informar">Prefiro não informar</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="form-row">
+              <div class="form-group flex-2">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" />
+              </div>
+
+              <div class="form-group">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" />
+              </div>
+
+              <div class="form-group">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                  <option value="">Selecione...</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="MG">Minas Gerais</option>
+                  <!-- Outros estados... -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cep">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep"
+                  pattern="[0-9]{5}-?[0-9]{3}"
+                  placeholder="00000-000"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferências</legend>
+
+            <div class="form-group">
+              <label>Interesses (múltipla escolha):</label>
+              <div class="checkbox-group">
+                <label
+                  ><input
+                    type="checkbox"
+                    name="interesses[]"
+                    value="tecnologia"
+                  />
+                  Tecnologia</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="interesses[]"
+                    value="esportes"
+                  />
+                  Esportes</label
+                >
+                <label
+                  ><input type="checkbox" name="interesses[]" value="musica" />
+                  Música</label
+                >
+                <label
+                  ><input type="checkbox" name="interesses[]" value="viagem" />
+                  Viagem</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="interesses[]"
+                    value="culinaria"
+                  />
+                  Culinária</label
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Frequência de contato:</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="frequencia" value="diario" />
+                  Diário</label
+                >
+                <label
+                  ><input type="radio" name="frequencia" value="semanal" />
+                  Semanal</label
+                >
+                <label
+                  ><input type="radio" name="frequencia" value="mensal" />
+                  Mensal</label
+                >
+                <label
+                  ><input type="radio" name="frequencia" value="nunca" />
+                  Nunca</label
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comentarios">Comentários adicionais:</label>
+              <textarea
+                id="comentarios"
+                name="comentarios"
+                rows="4"
+                placeholder="Digite seus comentários aqui..."
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="reset" class="btn-secondary">Limpar</button>
+            <button type="submit" class="btn-primary">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- VALIDAÇÃO -->
+      <section id="validacao" class="content-section">
+        <h2>✅ Validação de Formulários</h2>
+
+        <div class="validation-section">
+          <h3>Validação HTML5 (Nativa)</h3>
+          <form class="validation-form">
+            <div class="form-group">
+              <label for="email-val">Email (obrigatório):</label>
+              <input type="email" id="email-val" required />
+            </div>
+
+            <div class="form-group">
+              <label for="idade-val">Idade (18-99):</label>
+              <input type="number" id="idade-val" min="18" max="99" required />
+            </div>
+
+            <div class="form-group">
+              <label for="senha-val">Senha (mín. 6 caracteres):</label>
+              <input type="password" id="senha-val" minlength="6" required />
+            </div>
+
+            <div class="form-group">
+              <label for="site-val">Website:</label>
+              <input
+                type="url"
+                id="site-val"
+                placeholder="https://exemplo.com"
+              />
+            </div>
+
+            <button type="submit">Validar</button>
+          </form>
+        </div>
+
+        <div class="validation-tips">
+          <h4>Dicas de Validação:</h4>
+          <ul>
+            <li>Use <code>required</code> para campos obrigatórios</li>
+            <li>Use <code>pattern</code> para validação com regex</li>
+            <li>Use <code>min</code> e <code>max</code> para números</li>
+            <li>
+              Use <code>minlength</code> e <code>maxlength</code> para texto
+            </li>
+            <li>
+              Tipos específicos como <code>email</code> e <code>url</code> têm
+              validação automática
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ESTILIZAÇÃO -->
+      <section id="estilizacao" class="content-section">
+        <h2>🎨 Estilização com CSS</h2>
+
+        <div class="styling-examples">
+          <h3>Exemplos de Estilização</h3>
+
+          <div class="style-example">
+            <h4>Input com foco</h4>
+            <input type="text" class="focus-style" placeholder="Clique aqui" />
+          </div>
+
+          <div class="style-example">
+            <h4>Input com erro</h4>
+            <input type="email" class="error-style" value="email-invalido" />
+          </div>
+
+          <div class="style-example">
+            <h4>Input com sucesso</h4>
+            <input
+              type="email"
+              class="success-style"
+              value="email@valido.com"
+            />
+          </div>
+
+          <div class="style-example">
+            <h4>Botão customizado</h4>
+            <button class="custom-button">Botão Estilizado</button>
+          </div>
+        </div>
+
+        <div class="css-tips">
+          <h4>Seletores CSS Úteis:</h4>
+          <div class="css-code">
+            <pre><code>/* Estilizar todos os inputs */
+input { border: 1px solid #ccc; }
+
+/* Input com foco */
+input:focus { border-color: #007bff; }
+
+/* Input obrigatório */
+input:required { border-left: 3px solid orange; }
+
+/* Input válido */
+input:valid { border-color: green; }
+
+/* Input inválido */
+input:invalid { border-color: red; }
+
+/* Placeholder */
+input::placeholder { color: #999; }</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 - Aula sobre Formulários HTML e CSS</p>
+      <p>Pratique criando seus próprios formulários! 🚀</p>
+    </footer>
+
+    <script>
+      // Script simples para demonstrar interatividade
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll para navegação
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({ behavior: "smooth" });
+          });
+        });
+
+        // Exemplo de validação customizada
+        const forms = document.querySelectorAll("form");
+        forms.forEach((form) => {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Formulário enviado! (Este é apenas um exemplo)");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
